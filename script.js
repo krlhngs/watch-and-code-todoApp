@@ -1,7 +1,16 @@
 let todoList = {
     todos: [],
     displayTodos() {
-        console.log('My Todos: ', this.todos);
+        if (this.todos.length === 0) {
+            console.log('No todos!');
+        } else {
+            console.log('My todos: ');
+            for (let i = 0; i < this.todos.length; i++) {
+                this.todos[i].completed
+                    ? console.log('(x) ', this.todos[i].todoText)
+                    : console.log('( ) ', this.todos[i].todoText);
+            }
+        }
     },
 
     addTodo(todoText) {
@@ -24,5 +33,6 @@ let todoList = {
 
     toggleCompleted(position) {
         this.todos[position].completed = !this.todos[position].completed;
+        this.displayTodos();
     }
 };

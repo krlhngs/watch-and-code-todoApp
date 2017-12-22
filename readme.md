@@ -8,3 +8,6 @@
 * `todoList.toggleCompleted` should change the `completed` property
 
 ## V5 Loops of logic
+* displayTodos should show .todoText
+* displayTodos should tell you if .todos is empty
+* displayTodos should show .completed   (x)
