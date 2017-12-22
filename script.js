@@ -34,5 +34,26 @@ let todoList = {
     toggleCompleted(position) {
         this.todos[position].completed = !this.todos[position].completed;
         this.displayTodos();
+    },
+
+    toggleAll() {
+
+        let completedTodos=0;
+        let totalTodos = this.todos.length;
+
+        for (let i = 0; i<this.todos.length; i++){
+            if (this.todos[i].completed) completedTodos++;
+        }
+
+        if (completedTodos === totalTodos) {
+            for (let i = 0; i < this.todos.length; i++) {
+                this.todos[i].completed = false;
+            }
+        } else {
+            for (let i = 0; i < this.todos.length; i++) {
+                this.todos[i].completed = true;
+            }
+        }
+        this.displayTodos();
     }
 };
