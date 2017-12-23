@@ -20,3 +20,9 @@
 * there should be 'Display todos' button and a 'Toggle all' button.
 * clicking 'Display todos' should run `todoList.displayTodos`
 * clicking 'Toggle all' should run 'todoList.toggleAll`
+
+## V8
+*it sould have working controls for `.addTodo`
+*it sould have working controls for `.changeTodo`
+*it sould have working controls for `.deleteTodo`
+*it sould have working controls for `.toggleCompleted`

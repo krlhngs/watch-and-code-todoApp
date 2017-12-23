@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Watch and Code TodoApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watch and Code TodoApp</title>
 
-   <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
 </head>
 <body>
     <h1>Todo List</h1>
-    <button id="displayTodosButton">Display Todos</button>
-    <button id="toggleAllButton">Toggle All</button>
-    <script src="/script.js"></script>
-</body>
-</html>
+
+    <!-- <button id="displayTodosButton">Display Todos</button>
+        <button id="toggleAllButton">Toggle All</button> -->
+        <div>
+            <button onclick="handlers.displayTodos()">Display Todos</button>
+            <button onclick="handlers.toggleAll()">Toggle All</button>
+        </div>
+
+        <div>
+            <button onclick="handlers.addTodo()">Add</button>
+            <input id="addTodoTextInput" type="text">
+        </div>
+        <div>
+            <button onclick="handlers.changeTodo()">Change Todo</button>
+            <input type="number" id="changeTodoPositionInput">
+            <input type="text" id="changeTodoTextInput">
+        </div>
+        <div>
+            <button onclick="handlers.deleteTodo()">Delete Todo</button>
+            <input type="number" id="deleteTodoPositionInput">
+        </div>
+        <div>
+            <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
+            <input type="number" id="toggleCompletedPositionInput">
+        </div>
+
+        <script src="/script.js"></script>
+    </body>
+    </html>

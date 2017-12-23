@@ -32,7 +32,6 @@ let todoList = {
     },
 
     toggleCompleted(position) {
-        debugger;
         this.todos[position].completed = !this.todos[position].completed;
         this.displayTodos();
     },
@@ -58,13 +57,55 @@ let todoList = {
     }
 };
 
-let displayTodosButton = document.getElementById('displayTodosButton');
-let toggleAllButton = document.getElementById('toggleAllButton');
+// let displayTodosButton = document.getElementById('displayTodosButton');
+// let toggleAllButton = document.getElementById('toggleAllButton');
 
-displayTodosButton.addEventListener('click', function() {
-    todoList.displayTodos();
-});
+// displayTodosButton.addEventListener('click', function() {
+//     todoList.displayTodos();
+// });
 
-toggleAllButton.addEventListener('click', function() {
-    todoList.toggleAll();
-});
+// toggleAllButton.addEventListener('click', function() {
+//     todoList.toggleAll();
+// });
+
+let handlers = {
+    displayTodos() {
+        todoList.displayTodos();
+    },
+    addTodo() {
+        let addTodoTextInput = document.getElementById('addTodoTextInput');
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
+    },
+    changeTodo() {
+        let changeTodoPositionInput = document.getElementById(
+            'changeTodoPositionInput'
+        );
+        let changeTodoTextInput = document.getElementById(
+            'changeTodoTextInput'
+        );
+        todoList.changeTodo(
+            //!!!  Inaczej bedzie to string
+            changeTodoPositionInput.valueAsNumber,
+            changeTodoTextInput.value
+        );
+        changeTodoPositionInput.value = '';
+        changeTodoTextInput.value = '';
+    },
+    deleteTodo() {
+        let deleteTodoPositionInput = document.getElementById(
+            'deleteTodoPositionInput'
+        );
+        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+        deleteTodoPositionInput = '';
+    },
+    toggleCompleted() {
+        let toggleCompletedPositionInput = document.getElementById(
+            'toggleCompletedPositionInput'
+        );
+        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+    },
+    toggleAll() {
+        todoList.toggleAll();
+    },
+};
