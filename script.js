@@ -32,16 +32,16 @@ let todoList = {
     },
 
     toggleCompleted(position) {
+        debugger;
         this.todos[position].completed = !this.todos[position].completed;
         this.displayTodos();
     },
 
     toggleAll() {
-
-        let completedTodos=0;
+        let completedTodos = 0;
         let totalTodos = this.todos.length;
 
-        for (let i = 0; i<this.todos.length; i++){
+        for (let i = 0; i < this.todos.length; i++) {
             if (this.todos[i].completed) completedTodos++;
         }
 
@@ -57,3 +57,14 @@ let todoList = {
         this.displayTodos();
     }
 };
+
+let displayTodosButton = document.getElementById('displayTodosButton');
+let toggleAllButton = document.getElementById('toggleAllButton');
+
+displayTodosButton.addEventListener('click', function() {
+    todoList.displayTodos();
+});
+
+toggleAllButton.addEventListener('click', function() {
+    todoList.toggleAll();
+});
