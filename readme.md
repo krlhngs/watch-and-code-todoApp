@@ -22,7 +22,12 @@
 * clicking 'Toggle all' should run 'todoList.toggleAll`
 
 ## V8
-*it sould have working controls for `.addTodo`
-*it sould have working controls for `.changeTodo`
-*it sould have working controls for `.deleteTodo`
-*it sould have working controls for `.toggleCompleted`
+* it sould have working controls for `.addTodo`
+* it sould have working controls for `.changeTodo`
+* it sould have working controls for `.deleteTodo`
+* it sould have working controls for `.toggleCompleted`
+
+## V9 Escape from the console
+* There should be an li element for every todo
+* Each li element should contain `.todoText`
+* Each li element should show `completed`
